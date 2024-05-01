@@ -1,8 +1,10 @@
+#include <iostream>
 #include <SFML/Graphics.hpp>
+#include "RadarObject.h"
 
 int main()
 {
-    auto window = sf::RenderWindow{ { 1920u, 1080u }, "CMake SFML Project" };
+    auto window = sf::RenderWindow{ { 800u, 800u }, "CMake SFML Project" };
     window.setFramerateLimit(144);
 
     while (window.isOpen())
@@ -15,7 +17,12 @@ int main()
             }
         }
 
+        RadarObject testObject;
+
         window.clear();
+
+
+
         window.display();
     }
 }
